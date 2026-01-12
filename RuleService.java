@@ -11,20 +11,16 @@ import java.util.List;
 @Service
 public class RuleService {
 
-    // In-memory rule storage
     private final List<String> rules = new ArrayList<>();
 
-    // Add rules
     public void addRules(List<String> newRules) {
         rules.addAll(newRules);
     }
 
-    // Get all rules
     public List<String> getRules() {
         return rules;
     }
 
-    // Evaluate transactions
     public List<Transaction> evaluate(List<Transaction> transactions) {
 
         List<Transaction> matchedTransactions = new ArrayList<>();
@@ -46,7 +42,7 @@ public class RuleService {
                         break;
                     }
                 } catch (Exception e) {
-                    // Ignore invalid rule errors
+                    
                 }
             }
 
